@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dcdcdc;
+}
+
+.card-container {
+  width: 600px;
+  border-radius: 16px 16px 160px 16px;
+  background-color: #ffffff;
+  padding: 32px;
+  max-width: 90vw;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.inputs-container {
+  display: flex;
+  gap: 4px;
+}
+
+.input-label-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.input-label-container label {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.input-label-container input {
+  width: 130px;
+  padding: 12px 16px 12px 20px;
+  font-size: 24px;
+  color: #121212;
+  border-radius: 8px;
+  outline: none;
+  letter-spacing: 1px;
+}
+
+.input-label-container input:focus {
+  border: 1px solid #854DFF;
+}
+
+.error {
+  color: #f56383;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 4px;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.error.generic {
+  margin-top: 8px;
+}
+
+.divider-container {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.divider {
+  height: 2px;
+  background-color: #f2f2f2;
+  width: 86%;
+}
+
+.btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #854DFF;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: #121212;
+}
+
+.output-container h1 {
+  font-size: 64px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.output-container .highlighted {
+  color: #854DFF;
+  letter-spacing: 4px;
+}
+
+@media only screen and (max-width: 620px) {
+  .divider-container {
+    display: block;
+    position: relative;
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  .divider {
+    width: 100%;
+  }
+
+  .btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .inputs-container {
+    gap: 14px;
+  }
+
+  .input-label-container input {
+    font-size: 16px;
+  }
+
+  .output-container h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .inputs-container {
+    flex-direction: column;
+  }
+
+  .input-label-container {
+    width: 100%;
+  }
+
+  .input-label-container input {
+    width: 100%;
+  }
+
+  .card-container {
+    border-radius: 16px 16px 80px 16px;
+  }
+}
